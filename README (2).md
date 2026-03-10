@@ -1,4 +1,4 @@
-# 📚 Claude Assignment Log Book API
+# WADS Assignment Log Book API
 
 A RESTful API for managing student assignment logs, built with **Next.js 14 App Router**. Includes full Swagger/OpenAPI documentation, pagination, filtering, and comprehensive test coverage.
 
@@ -225,19 +225,6 @@ The raw OpenAPI 3.0 spec is served at `GET /api/docs/swagger.json`.
 
 ---
 
-## 🛠️ Technology Stack
-
-| Layer | Technology |
-|-------|-----------|
-| Framework | Next.js 14 (App Router) |
-| Language | TypeScript |
-| Styling | Tailwind CSS |
-| API Docs | Swagger UI (OpenAPI 3.0) |
-| Testing | Node.js built-in test runner / Jest + ts-jest |
-| Data Store | In-memory (replaceable with PostgreSQL/MongoDB) |
-
----
-
 ## 🔄 Replacing the In-Memory Store
 
 The `lib/store.ts` file provides a clean interface. To replace with a real database, only this file needs to change — all API routes remain untouched.
@@ -251,14 +238,3 @@ export async function getAllAssignments() {
 }
 ```
 
----
-
-## 📝 Assignment
-
-**Course:** Web Development  
-**Student:** Claude  
-**Assignment:** REST API Design & Documentation — Next.js Assignment Log Book  
-
----
-
-*Built with Next.js 14, TypeScript, and ❤️*
