@@ -1,0 +1,47 @@
+# ── Node & Build artefacts ──────────────────────────────────────
+node_modules
+.next
+out
+
+# ── Version control ──────────────────────────────────────────────
+.git
+.gitignore
+.gitattributes
+
+# ── Docker files (don't embed these in the image) ───────────────
+Dockerfile
+Dockerfile.*
+docker-compose*.yml
+.dockerignore
+
+# ── Environment & secrets ────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Dev & debug logs ─────────────────────────────────────────────
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# ── Documentation ────────────────────────────────────────────────
+README.md
+CHANGELOG.md
+docs/
+
+# ── Editor & OS files ────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Test files ───────────────────────────────────────────────────
+__tests__/
+*.test.ts
+*.spec.ts
+jest.config.*
+run-tests.mjs
+coverage/

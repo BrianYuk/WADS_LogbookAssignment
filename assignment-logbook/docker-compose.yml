@@ -1,0 +1,30 @@
+# ════════════════════════════════════════════════════════════════
+#  docker-compose.yml — LOCAL stack
+#  Usage: docker compose up -d
+#  App URL: http://localhost:3000
+# ════════════════════════════════════════════════════════════════
+
+services:
+  web:
+    image: nextjs-week10-app:local
+    container_name: nextjs-week10-container
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/api/assignments/stats"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+# ── How to use ──────────────────────────────────────────────────
+# 1. Build first:  docker build -t nextjs-week10-app:local .
+# 2. Start stack:  docker compose up -d
+# 3. Check status: docker ps
+# 4. Smoke test:   curl -I http://localhost:3000
+# 5. View logs:    docker compose logs -f
+# 6. Stop:         docker compose down
